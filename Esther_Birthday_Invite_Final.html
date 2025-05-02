@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barrister Esther Otsabomhe - Birthday Invitation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #6a1b9a, #ba68c8);
+      color: #fff;
+      padding: 40px 20px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      color: #333;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h1 {
+      color: #6a1b9a;
+    }
+
+    .info {
+      margin: 15px 0;
+      font-size: 16px;
+    }
+
+    .qr-section {
+      margin: 30px 0;
+    }
+
+    .qr-section img {
+      width: 180px;
+      height: 180px;
+      margin: 10px auto;
+      display: block;
+    }
+
+    .code-box {
+      background: #f3e5f5;
+      color: #4a148c;
+      padding: 10px;
+      margin: 10px auto;
+      border-radius: 8px;
+      width: 200px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .copy-btn {
+      margin-top: 8px;
+      background-color: #6a1b9a;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background-color: #4a0072;
+    }
+
+    .rsvp-btn {
+      margin-top: 20px;
+      background-color: #ff9800;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .rsvp-btn:hover {
+      background-color: #fb8c00;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 You're Invited! 🎉</h1>
+    <p class="info"><strong>Celebrant:</strong> Barrister Esther Otsabomhe</p>
+    <p class="info"><strong>Venue:</strong> Lagos Continental Hotel</p>
+    <p class="info"><strong>Address:</strong> 52a Kofo Abayomi St, Victoria Island, Lagos</p>
+    <p class="info"><strong>Time:</strong> 12 Noon</p>
+
+    <div class="qr-section">
+      <p><strong>Invitation Passcode</strong></p>
+      <div class="code-box" id="inv-code">INV-ESTHER25</div>
+      <button class="copy-btn" onclick="copyCode('inv-code')">Copy Invitation Code</button>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=INV-ESTHER25&size=200x200" alt="Invitation QR">
+    </div>
+
+    <div class="qr-section">
+      <p><strong>Verification Passcode</strong></p>
+      <div class="code-box" id="ver-code">VERI-ESTHER25</div>
+      <button class="copy-btn" onclick="copyCode('ver-code')">Copy Verification Code</button>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=VERI-ESTHER25&size=200x200" alt="Verification QR">
+    </div>
+
+    <a href="https://wa.me/2348033883227" target="_blank" class="rsvp-btn">RSVP on WhatsApp</a>
+
+    <footer>
+      Kindly present your verification passcode at the venue. One code per guest. Thank you!
+    </footer>
+  </div>
+
+  <script>
+    function copyCode(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text);
+      alert('Code copied: ' + text);
+    }
+  </script>
+</body>
+</html>
